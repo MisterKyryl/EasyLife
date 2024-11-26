@@ -5,10 +5,13 @@
 	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241125172746">
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20241126214301">
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -77,25 +80,25 @@
 		<main class="page">
 			<section class="page__main main">
 				<div class="main__container">
-					<div class="main__content">
-						<div class="main__body body-main">
+					<div data-watch data-watch-once class="main__content">
+						<div class="main__body body-main watcher--body_main">
 							<h1 class="body-main__title title--h1">Легке вирішення складних задач</h1>
 							<p class="body-main__text text--main">Простота і ефективність на кожному кроці. Ми робимо складні процеси зрозумілими та
 								ефективними<span>, гарантуючи результат на кожному етапі співпраці</span>.</p>
 							<button type="button" class="body-main__button button button_blue">Спробувати</button>
 						</div>
-						<div class="main__image">
-							<img src="img/main/main/01.webp" class="main__picture" alt="Image">
+						<div class="main__image watcher--image_main">
+							<img src="img/cube/cube_blue/1.webp" class="main__picture image-main" alt="Image">
 						</div>
 					</div>
 				</div>
 			</section>
 			<section class="page__services services">
-				<div class="services__container">
-					<h2 class="services__tilte title--h2">Наші послуги</h2>
+				<div data-watch data-watch-once data-watch-threshold="0.125" class="services__container">
+					<h2 class="services__tilte title--h2 watcher--body">Наші послуги</h2>
 					<div class="services__content">
 						<div class="services__image">
-							<img src="img/main/services/01.webp" class="services__picture" alt="Image">
+							<img src="img/cube/cube_blue/1.webp" class="services__picture" alt="Image">
 						</div>
 						<div class="services__body body-services">
 							<div class="body-services__item">
@@ -203,7 +206,7 @@
 				<div class="portfolio__container">
 					<div class="portfolio__slider swiper">
 						<div class="portfolio__top">
-							<h2 class="portfolio__title title--h2">Наші роботи</h2>
+							<h2 data-watch data-watch-once data-watch-threshold="1" class="portfolio__title title--h2 watcher--body">Наші роботи</h2>
 							<div class="portfolio__actions">
 								<button type="button" class="portfolio__button-prev swiper-button-prev">
 									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -329,9 +332,9 @@
 			</section>
 			<section class="page__create create">
 				<div class="create__container">
-					<h2 class="create__title title--h2">Що ми створюємо</h2>
+					<h2 data-watch data-watch-once data-watch-threshold="1" class="create__title title--h2 watcher--body">Що ми створюємо</h2>
 					<div class="create__body body-create">
-						<a href="#" class="body-create__item">
+						<a data-watch data-watch-once data-watch-threshold=".75" href="#" class="body-create__item watcher--body">
 							<div class="body-create__image">
 								<img src="img/main/create/01.webp" class="body-create__picture" alt="Image">
 							</div>
@@ -351,7 +354,7 @@
 								</p>
 							</div>
 						</a>
-						<a href="#" class="body-create__item">
+						<a data-watch data-watch-once data-watch-threshold=".75" href="#" class="body-create__item watcher--body">
 							<div class="body-create__image">
 								<img src="img/main/create/02.webp" class="body-create__picture" alt="Image">
 							</div>
@@ -371,7 +374,7 @@
 								</p>
 							</div>
 						</a>
-						<a href="#" class="body-create__item">
+						<a data-watch data-watch-once data-watch-threshold=".75" href="#" class="body-create__item watcher--body">
 							<div class="body-create__image">
 								<img src="img/main/create/03.webp" class="body-create__picture" alt="Image">
 							</div>
@@ -391,7 +394,7 @@
 								</p>
 							</div>
 						</a>
-						<a href="#" class="body-create__item">
+						<a data-watch data-watch-once data-watch-threshold=".75" href="#" class="body-create__item watcher--body">
 							<div class="body-create__image">
 								<img src="img/main/create/04.webp" class="body-create__picture" alt="Image">
 							</div>
@@ -411,7 +414,7 @@
 								</p>
 							</div>
 						</a>
-						<a href="#" class="body-create__item">
+						<a data-watch data-watch-once data-watch-threshold=".75" href="#" class="body-create__item watcher--body">
 							<div class="body-create__image">
 								<img src="img/main/create/05.webp" class="body-create__picture" alt="Image">
 							</div>
@@ -431,7 +434,7 @@
 								</p>
 							</div>
 						</a>
-						<a href="#" class="body-create__item">
+						<a data-watch data-watch-once data-watch-threshold=".75" href="#" class="body-create__item watcher--body">
 							<div class="body-create__image">
 								<img src="img/main/create/06.webp" class="body-create__picture" alt="Image">
 							</div>
@@ -456,7 +459,7 @@
 			</section>
 			<section class="page__create-project create-project">
 				<div class="create-project__container">
-					<div class="create-project__body">
+					<div data-watch data-watch-once data-watch-threshold="1" class="create-project__body watcher--body">
 						<h2 class="create-project__title title--h2">Створіть проект за допомогою кабінету</h2>
 						<p class="create-project__text text--small">
 							Проект в кабінеті створюється у 2 кліки! Спробуйте та отримайте повний доступ до всіх
@@ -464,8 +467,8 @@
 						</p>
 						<button type="button" class="create-project__button button button_blue">Спробувати</button>
 					</div>
-					<div class="create-project__image">
-						<img src="img/main/services/01.webp" class="create-project__picture" alt="Image">
+					<div data-watch data-watch-once data-watch-threshold="1" class="create-project__image">
+						<img src="img/cube/cube_blue/1.webp" class="create-project__picture image-main watcher--image" alt="Image">
 					</div>
 				</div>
 			</section>
@@ -683,7 +686,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241125172746"></script>
+	<script src="js/app.min.js?_v=20241126214301"></script>
 </body>
 
 </html>
