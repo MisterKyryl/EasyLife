@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241127210734">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241127214203">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -27,12 +27,14 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__title">Головна</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Сервіс</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Спеціалізація</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Портфоліо</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пропозиція</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+							<li class="menu__item">
+								<div class="menu__title">Головна</div>
+							</li>
+							<li class="menu__item"><a href="#" data-goto="#main" data-goto-header class="menu__link">Сервіс</a></li>
+							<li class="menu__item"><a href="#" data-goto="#services" data-goto-header class="menu__link">Спеціалізація</a></li>
+							<li class="menu__item"><a href="#" data-goto="#portfolio" data-goto-header class="menu__link">Портфоліо</a></li>
+							<li class="menu__item"><a href="#" data-goto="#create" data-goto-header class="menu__link">Пропозиція</a></li>
+							<li class="menu__item"><a href="#" data-goto="#contact" data-goto-header class="menu__link">Контакти</a></li>
 						</ul>
 						<div class="menu__socials socials-menu">
 							<div class="socials-menu__title">Соц.мережі</div>
@@ -91,18 +93,18 @@
 					</nav>
 				</div>
 				<button type="button" class="header__button button button_black button--fw">Кабінет</button>
-				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<a href="#" data-goto="#contact" data-goto-header class="menu__icon icon-menu"><span></span></a>
 			</div>
 		</header>
 		<main class="page">
-			<section class="page__main main">
+			<section id="main" class="page__main main">
 				<div class="main__container">
 					<div data-watch data-watch-once class="main__content">
 						<div class="main__body body-main watcher--body_main">
 							<h1 class="body-main__title title--h1">Легке вирішення складних задач</h1>
 							<p class="body-main__text text--main">Простота і ефективність на кожному кроці. Ми робимо складні процеси зрозумілими та
 								ефективними<span>, гарантуючи результат на кожному етапі співпраці</span>.</p>
-							<button type="button" class="body-main__button button button_blue">Спробувати</button>
+							<a href="#" data-goto="#contact" data-goto-header class="body-main__button button button_blue">Спробувати</a>
 						</div>
 						<div class="main__image watcher--image_main">
 							<img src="img/cube/cube_blue/1.webp" class="main__picture image-main" alt="Image">
@@ -110,7 +112,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__services services">
+			<section id="services" class="page__services services">
 				<div data-watch data-watch-once data-watch-threshold="0.125" class="services__container">
 					<h2 class="services__tilte title--h2 watcher--body">Наші послуги</h2>
 					<div class="services__content">
@@ -219,7 +221,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__portfolio portfolio">
+			<section id="portfolio" class="page__portfolio portfolio">
 				<div class="portfolio__container">
 					<div class="portfolio__slider swiper">
 						<div class="portfolio__top">
@@ -347,7 +349,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__create create">
+			<section id="create" class="page__create create">
 				<div class="create__container">
 					<h2 data-watch data-watch-once data-watch-threshold="1" class="create__title title--h2 watcher--body">Що ми створюємо</h2>
 					<div class="create__body body-create">
@@ -482,14 +484,14 @@
 							Проект в кабінеті створюється у 2 кліки! Спробуйте та отримайте повний доступ до всіх
 							функцій кабінету і взаємодії з проєктом.
 						</p>
-						<button type="button" class="create-project__button button button_blue">Спробувати</button>
+						<a href="#" data-goto="#contact" data-goto-header class="create-project__button button button_blue">Спробувати</a>
 					</div>
 					<div data-watch data-watch-once data-watch-threshold="1" class="create-project__image">
 						<img src="img/cube/cube_blue/1.webp" class="create-project__picture image-main watcher--image" alt="Image">
 					</div>
 				</div>
 			</section>
-			<section class="page__contact contact">
+			<section id="contact" class="page__contact contact">
 				<div class="contact__container">
 					<div class="contact__body body-contact">
 						<div class="body-contact__top">
@@ -631,13 +633,13 @@
 						</svg>
 					</a>
 					<div class="top-footer__list">
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Сервіс</a></div>
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Спеціалізація</a></div>
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Портфоліо</a></div>
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Пропозиція</a></div>
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Контакти</a></div>
+						<div class="top-footer__item"><a href="#" data-goto="#main" data-goto-header class="top-footer__link">Сервіс</a></div>
+						<div class="top-footer__item"><a href="#" data-goto="#services" data-goto-header class="top-footer__link">Спеціалізація</a></div>
+						<div class="top-footer__item"><a href="#" data-goto="#portfolio" data-goto-header class="top-footer__link">Портфоліо</a></div>
+						<div class="top-footer__item"><a href="#" data-goto="#create" data-goto-header class="top-footer__link">Пропозиція</a></div>
+						<div class="top-footer__item"><a href="#" data-goto="#contact" data-goto-header class="top-footer__link">Контакти</a></div>
 					</div>
-					<button type="button" class="top-footer__button button button--fw">Створити проект</button>
+					<a href="#" data-goto="#contact" data-goto-header class="top-footer__button button button--fw">Створити проект</a>
 					<div class="top-footer__body body-top-footer">
 						<a href="#" class="body-top-footer__item">
 							<div class="body-top-footer__image">
@@ -703,7 +705,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241127210734"></script>
+	<script src="js/app.min.js?_v=20241127214203"></script>
 </body>
 
 </html>

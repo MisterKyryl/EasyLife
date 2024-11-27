@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241127210734">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241127214203">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -27,12 +27,14 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__title">Головна</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Сервіс</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Спеціалізація</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Портфоліо</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пропозиція</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+							<li class="menu__item">
+								<div class="menu__title">Головна</div>
+							</li>
+							<li class="menu__item"><a href="index.html" class="menu__link">Сервіс</a></li>
+							<li class="menu__item"><a href="index.html" class="menu__link">Спеціалізація</a></li>
+							<li class="menu__item"><a href="index.html" class="menu__link">Портфоліо</a></li>
+							<li class="menu__item"><a href="index.html" class="menu__link">Пропозиція</a></li>
+							<li class="menu__item"><a href="#" data-goto="#contact" data-goto-header class="menu__link">Контакти</a></li>
 						</ul>
 						<div class="menu__socials socials-menu">
 							<div class="socials-menu__title">Соц.мережі</div>
@@ -90,7 +92,7 @@
 						</div>
 					</nav>
 				</div>
-				<button type="button" class="header__button button button_black button--fw">Кабінет</button>
+				<a href="#" data-goto="#contact" data-goto-header class="header__button button button_black button--fw">Кабінет</a>
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 			</div>
 		</header>
@@ -349,7 +351,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__contact contact">
+			<section id="contact" class="page__contact contact">
 				<div class="contact__container">
 					<div class="contact__body body-contact">
 						<div class="body-contact__top">
@@ -491,13 +493,13 @@
 						</svg>
 					</a>
 					<div class="top-footer__list">
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Сервіс</a></div>
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Спеціалізація</a></div>
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Портфоліо</a></div>
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Пропозиція</a></div>
-						<div class="top-footer__item"><a href="#" class="top-footer__link">Контакти</a></div>
+						<div class="top-footer__item"><a href="index.html" class="top-footer__link">Сервіс</a></div>
+						<div class="top-footer__item"><a href="index.html" class="top-footer__link">Спеціалізація</a></div>
+						<div class="top-footer__item"><a href="index.html" class="top-footer__link">Портфоліо</a></div>
+						<div class="top-footer__item"><a href="index.html" class="top-footer__link">Пропозиція</a></div>
+						<div class="top-footer__item"><a href="#" data-goto="#contact" data-goto-header class="top-footer__link">Контакти</a></div>
 					</div>
-					<button type="button" class="top-footer__button button button--fw">Створити проект</button>
+					<a href="#" data-goto="#contact" data-goto-header class="top-footer__button button button--fw">Створити проект</a>
 					<div class="top-footer__body body-top-footer">
 						<a href="#" class="body-top-footer__item">
 							<div class="body-top-footer__image">
@@ -563,7 +565,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241127210734"></script>
+	<script src="js/app.min.js?_v=20241127214203"></script>
 </body>
 
 </html>
