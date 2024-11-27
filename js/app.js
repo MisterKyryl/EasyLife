@@ -5975,7 +5975,7 @@
     axios.HttpStatusCode = helpers_HttpStatusCode;
     axios.default = axios;
     const lib_axios = axios;
-    const token = "7706332572:AAFceVPQkDIGy9Onhnx5ngNDU4spGZ7gLTM";
+    const token = "6607850427:AAHwlRMqaIc0_FZoGyqrNqU0eRhQbuzSsB0";
     const chatId = "-4739296044";
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
     document.getElementById("contactForm").addEventListener("submit", (event => {
