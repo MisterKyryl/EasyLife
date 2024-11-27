@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241126214301">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241127194058">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -71,6 +71,23 @@
 								</a>
 							</div>
 						</div>
+						<div class="menu__other other-menu">
+							<div class="other-menu__title">Інше</div>
+							<div class="other-menu__body">
+								<a href="#" class="other-menu__item">
+									<div class="other-menu__text">UA</div>
+								</a>
+								<a href="#" class="other-menu__item">
+									<div class="other-menu__text">RU</div>
+								</a>
+								<a href="#" class="other-menu__item">
+									<div class="other-menu__text">PL</div>
+								</a>
+								<a href="#" class="other-menu__item">
+									<div class="other-menu__text">EN</div>
+								</a>
+							</div>
+						</div>
 					</nav>
 				</div>
 				<button type="button" class="header__button button button_black button--fw">Кабінет</button>
@@ -79,8 +96,8 @@
 		</header>
 		<main class="page">
 			<section class="page__game game">
-				<div class="game__container">
-					<div class="game__body">
+				<div data-watch data-watch-once class="game__container">
+					<div class="game__body watcher--body_main">
 						<h2 class="game__title title--h1">
 							PSP Game
 						</h2>
@@ -89,17 +106,17 @@
 							завдяки інноваційному підходу до геймінгу та використанню криптовалют.
 						</p>
 					</div>
-					<div class="game__image">
+					<div class="game__image  watcher--image_main">
 						<img src="img/portfolio/game/01.webp" class="game__picture" alt="Image">
 					</div>
 				</div>
 			</section>
-			<section class="page__exercise exercise">
+			<section data-watch data-watch-once data-watch-threshold="1" class="page__exercise exercise">
 				<div class="exercise__container">
 					<div data-da=".exercise__top,767.98,0" class="exercise__image">
 						<img src="img/portfolio/exercise/01.svg" class="exercise__picture" alt="Image">
 					</div>
-					<div class="exercise__body">
+					<div class="exercise__body watcher--body">
 						<div class="exercise__top">
 							<h3 class="exercise__title title--h3">Задача</h3>
 						</div>
@@ -112,9 +129,9 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__solution solution">
+			<section data-watch data-watch-once data-watch-threshold="1" class="page__solution solution">
 				<div class="solution__container">
-					<div class="solution__body">
+					<div class="solution__body watcher--body">
 						<div class="solution__top">
 							<h3 class="solution__title title--h3">Вирішення</h3>
 						</div>
@@ -128,52 +145,97 @@
 					</div>
 				</div>
 			</section>
-			<!-- <section class="page__result result">
+			<section class="page__result result">
 				<div class="result__container">
+					<h3 class="body-result__title body-result__title_main title--h3">
+						Результат
+					</h3>
 					<div class="result__slider swiper">
 						<div class="result__wrapper swiper-wrapper">
 							<div class="result__slide swiper-slide">
-								<div class="result__content">
-									<div class="result__image">
-										<img src="img/portfolio/result/01.webp" class="result__picture" alt="Image">
+								<div class="result__image">
+									<img src="img/portfolio/result/01.webp" class="result__picture" alt="Image">
+								</div>
+								<div class="result__body body-result">
+									<div class="body-result__top">
+										<h3 class="body-result__title title--h3">
+											Результат
+										</h3>
+										<p class="body-result__text text--small">
+											Готова ігрова платформа з першою грою "Mines" та інтеграцією сторонніх сервісів для виведення та поповнення
+											коштів.
+										</p>
 									</div>
-									<div class="result__body body-result">
-										<div class="body-result__top">
-											<h3 class="body-result__title title--h3">
-												Результат
-											</h3>
-											<p class="body-result__text text--small">
-												Готова ігрова платформа з першою грою "Mines" та інтеграцією сторонніх сервісів для виведення та поповнення
-												коштів.
-											</p>
+									<div class="body-result__item item-body-result">
+										<div class="item-body-result__label">
+											<h5 class="item-body-result__title title--h3">Термін виконання:</h5>
+											<p class="item-body-result__text text--small">Пішло на розробку, планування, і запуск проекту</p>
 										</div>
-										<div class="body-result__item item-body-result">
-											<div class="item-body-result__label">
-												<h5 class="item-body-result__title title--h3">Термін виконання:</h5>
-												<p class="item-body-result__text text--small">Пішло на розробку, планування, і запуск проекту</p>
-											</div>
-											<div class="item-body-result__value">
-												<div class="item-body-result__number">5</div>
-												<span class="item-body-result__span">Тижнів</span>
-											</div>
+										<div class="item-body-result__value">
+											<div class="item-body-result__number">5</div>
+											<span class="item-body-result__span">Тижнів</span>
 										</div>
-										<div class="body-result__item item-body-result">
-											<div class="item-body-result__label">
-												<h5 class="item-body-result__title title--h3">Бюджет:</h5>
-												<p class="item-body-result__text text--small">Вартість розробки проекту</p>
-											</div>
-											<div class="item-body-result__value">
-												<div class="item-body-result__number">NDA</div>
-											</div>
+									</div>
+									<div class="body-result__item item-body-result">
+										<div class="item-body-result__label">
+											<h5 class="item-body-result__title title--h3">Бюджет:</h5>
+											<p class="item-body-result__text text--small">Вартість розробки проекту</p>
 										</div>
-										<div class="body-result__item item-body-result">
-											<div class="item-body-result__label">
-												<h5 class="item-body-result__title title--h3">Кількість юзерів:</h5>
-												<p class="item-body-result__text text--small">Кількість користувачів щомісячно</p>
-											</div>
-											<div class="item-body-result__value">
-												<div class="item-body-result__number">250.000+</div>
-											</div>
+										<div class="item-body-result__value">
+											<div class="item-body-result__number">NDA</div>
+										</div>
+									</div>
+									<div class="body-result__item item-body-result">
+										<div class="item-body-result__label">
+											<h5 class="item-body-result__title title--h3">Кількість юзерів:</h5>
+											<p class="item-body-result__text text--small">Кількість користувачів щомісячно</p>
+										</div>
+										<div class="item-body-result__value">
+											<div class="item-body-result__number">250.000+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="result__slide swiper-slide">
+								<div class="result__image">
+									<img src="img/portfolio/result/01.webp" class="result__picture" alt="Image">
+								</div>
+								<div class="result__body body-result">
+									<div class="body-result__top">
+										<h3 class="body-result__title title--h3">
+											Результат
+										</h3>
+										<p class="body-result__text text--small">
+											Готова ігрова платформа з першою грою "Mines" та інтеграцією сторонніх сервісів для виведення та поповнення
+											коштів.
+										</p>
+									</div>
+									<div class="body-result__item item-body-result">
+										<div class="item-body-result__label">
+											<h5 class="item-body-result__title title--h3">Термін виконання:</h5>
+											<p class="item-body-result__text text--small">Пішло на розробку, планування, і запуск проекту</p>
+										</div>
+										<div class="item-body-result__value">
+											<div class="item-body-result__number">5</div>
+											<span class="item-body-result__span">Тижнів</span>
+										</div>
+									</div>
+									<div class="body-result__item item-body-result">
+										<div class="item-body-result__label">
+											<h5 class="item-body-result__title title--h3">Бюджет:</h5>
+											<p class="item-body-result__text text--small">Вартість розробки проекту</p>
+										</div>
+										<div class="item-body-result__value">
+											<div class="item-body-result__number">NDA</div>
+										</div>
+									</div>
+									<div class="body-result__item item-body-result">
+										<div class="item-body-result__label">
+											<h5 class="item-body-result__title title--h3">Кількість юзерів:</h5>
+											<p class="item-body-result__text text--small">Кількість користувачів щомісячно</p>
+										</div>
+										<div class="item-body-result__value">
+											<div class="item-body-result__number">250.000+</div>
 										</div>
 									</div>
 								</div>
@@ -224,15 +286,23 @@
 							</div>
 						</div>
 						<div class="result__actions">
-							<button type="button" class="result__button-prev swiper-button-prev main-button-prev"></button>
+							<button type="button" class="result__button-prev swiper-button-prev main-button-prev">
+								<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 6.66666L12 16L20 25.3333" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
 							<div class="result__pagination swiper-pagination main-pagination"></div>
-							<button type="button" class="result__button-next swiper-button-next main-button-prev"></button>
+							<button type="button" class="result__button-next swiper-button-next main-button-prev">
+								<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 6.66666L20 16L12 25.3333" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
 						</div>
 					</div>
 				</div>
-			</section> -->
-			<section class="page__functionality functionality">
-				<div class="functionality__container">
+			</section>
+			<section data-watch data-watch-once data-watch-threshold="1" class="page__functionality functionality">
+				<div class="functionality__container watcher--body">
 					<h3 class="functionality__title">
 						Реалізований <br> функціонал
 					</h3>
@@ -246,7 +316,7 @@
 				<div class="about__container">
 					<div class="about__slider swiper">
 						<div class="about__wrapper swiper-wrapper">
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -262,7 +332,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -277,7 +347,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -292,7 +362,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -308,7 +378,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -342,8 +412,8 @@
 				</div>
 			</section>
 			<section class="page__create-project create-project create-project-portfolio">
-				<div class="create-project__container">
-					<div class="create-project__body">
+				<div data-watch data-watch-once data-watch-threshold=".3" class="create-project__container">
+					<div class="create-project__body  watcher--body">
 						<h3 class="create-project__title title--h2">Створіть проект за допомогою кабінету</h3>
 						<p class="create-project__text text--small">
 							Проект в кабінеті створюється у 2 кліки! Спробуйте та отримайте повний доступ до всіх
@@ -351,8 +421,8 @@
 						</p>
 						<button type="button" class="create-project__button button button_blue">Створити Бота</button>
 					</div>
-					<div class="create-project__image">
-						<img src="img/main/services/01.webp" class="create-project__picture" alt="Image">
+					<div class="create-project__image  watcher--image">
+						<img src="img/main/services/01.webp" class="create-project__picture image-main" alt="Image">
 					</div>
 				</div>
 			</section>
@@ -570,7 +640,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241126214301"></script>
+	<script src="js/app.min.js?_v=20241127194058"></script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241126214301">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241127194058">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -71,6 +71,23 @@
 								</a>
 							</div>
 						</div>
+						<div class="menu__other other-menu">
+							<div class="other-menu__title">Інше</div>
+							<div class="other-menu__body">
+								<a href="#" class="other-menu__item">
+									<div class="other-menu__text">UA</div>
+								</a>
+								<a href="#" class="other-menu__item">
+									<div class="other-menu__text">RU</div>
+								</a>
+								<a href="#" class="other-menu__item">
+									<div class="other-menu__text">PL</div>
+								</a>
+								<a href="#" class="other-menu__item">
+									<div class="other-menu__text">EN</div>
+								</a>
+							</div>
+						</div>
 					</nav>
 				</div>
 				<button type="button" class="header__button button button_black button--fw">Кабінет</button>
@@ -79,8 +96,8 @@
 		</header>
 		<main class="page">
 			<section class="page__game game what-we-create">
-				<div class="game__container">
-					<div class="game__body">
+				<div data-watch data-watch-once class="game__container">
+					<div class="game__body watcher--body_main">
 						<h2 class="game__title title--h1">
 							Телеграм боти
 						</h2>
@@ -89,12 +106,12 @@
 							надавати інформацію, запускати опитування та інтегруватися з іншими сервісами.
 						</p>
 					</div>
-					<div class="game__image">
+					<div class="game__image watcher--image_main">
 						<img src="img/what-we-create/game/01.webp" class="game__picture" alt="Image">
 					</div>
 				</div>
 			</section>
-			<section class="page__functionality functionality what-we-create-functionality">
+			<section data-watch data-watch-once data-watch-threshold="1" class="page__functionality functionality what-we-create-functionality watcher--body">
 				<div class="functionality__container">
 					<h3 class="functionality__title">
 						Можливості <br> Телеграм ботів
@@ -109,7 +126,7 @@
 				<div class="about__container">
 					<div class="about__slider swiper">
 						<div class="about__wrapper swiper-wrapper">
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body ">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -125,7 +142,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -140,7 +157,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -155,7 +172,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -171,7 +188,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="about__slide swiper-slide">
+							<div data-watch data-watch-once data-watch-threshold="1" class="about__slide swiper-slide watcher--body">
 								<div class="about__body">
 									<div class="about__item">
 										<div class="about__image">
@@ -208,7 +225,7 @@
 				<div class="portfolio__container">
 					<div class="portfolio__slider swiper">
 						<div class="portfolio__top">
-							<h2 class="portfolio__title title--h2">Наші роботи</h2>
+							<h2 data-watch data-watch-once data-watch-threshold="1" class="portfolio__title title--h2 watcher--body">Наші роботи</h2>
 							<div class="portfolio__actions">
 								<button type="button" class="portfolio__button-prev swiper-button-prev">
 									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -546,7 +563,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241126214301"></script>
+	<script src="js/app.min.js?_v=20241127194058"></script>
 </body>
 
 </html>
