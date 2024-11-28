@@ -6065,18 +6065,32 @@
     axios.HttpStatusCode = helpers_HttpStatusCode;
     axios.default = axios;
     const lib_axios = axios;
-    const token = "6607850427:AAHwlRMqaIc0_FZoGyqrNqU0eRhQbuzSsB0";
-    const chatId = "-4739296044";
+    const token = "";
+    const chatId = "";
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
     document.getElementById("contactForm").addEventListener("submit", (event => {
         event.preventDefault();
-        const name = document.getElementById("name").value.trim();
-        const textarea = document.getElementById("textarea").value.trim();
-        if (!name || !name.includes("@")) {
-            alert('Please enter a nickname with the "@" symbol.');
+        const getFieldValue = id => {
+            const field = document.getElementById(id);
+            return field ? field.value.trim() : "";
+        };
+        const name = getFieldValue("name");
+        const tel = getFieldValue("tel");
+        const email = getFieldValue("email");
+        const textarea = getFieldValue("textarea");
+        if (!name && !tel && !email) {
+            alert("Please fill in at least one field.");
             return;
         }
-        const message = `👤 *Nickname:* ${name}\n💬 *Comment:* ${textarea || "No comment."}`;
+        const activeCategories = Array.from(document.querySelectorAll(".form-item-category._active-button-category"));
+        if (activeCategories.length === 0) {
+            alert("Please select at least one category.");
+            return;
+        }
+        const selectedCategories = activeCategories.map((button => button.getAttribute("data-category"))).join(", ");
+        let contactInfo = "";
+        if (name) contactInfo = `*Nickname:* ${name}`; else if (tel) contactInfo = `*Phone:* ${tel}`; else if (email) contactInfo = `*Email:* ${email}`;
+        const message = `${contactInfo}\n*Comment:* ${textarea || "No comment."}\n*Categories:* ${selectedCategories}`;
         lib_axios.post(url, {
             chat_id: chatId,
             text: message,
@@ -6158,19 +6172,78 @@
         }
     }));
     document.addEventListener("DOMContentLoaded", (function() {
+        const socialButtons = document.querySelectorAll(".form-item-social");
+        const textElement = document.querySelector(".item-body-contact__text");
+        const imageElement = document.querySelector(".item-body-contact__image");
+        const categoryButtons = document.querySelectorAll(".form-item-category");
+        const formFields = {
+            name: document.getElementById("name"),
+            tel: document.getElementById("tel"),
+            email: document.getElementById("email")
+        };
+        function updateContactInfo(activeButton) {
+            const socialText = activeButton.getAttribute("data-social");
+            textElement.textContent = socialText;
+            const activeImage = activeButton.querySelector(".actions-contact__image").innerHTML;
+            imageElement.innerHTML = activeImage;
+            removeActiveClassFromFormElements();
+            if (activeButton.classList.contains("_active-button-contact")) if (activeButton.classList.contains("form-item-social_name")) {
+                formFields.name.classList.add("_active-form-body-contact");
+                formFields.name.setAttribute("id", "name");
+                updateLabelClass("name");
+            } else if (activeButton.classList.contains("form-item-social_phone")) {
+                formFields.tel.classList.add("_active-form-body-contact");
+                formFields.tel.setAttribute("id", "tel");
+                updateLabelClass("tel");
+            } else if (activeButton.classList.contains("form-item-social_email")) {
+                formFields.email.classList.add("_active-form-body-contact");
+                formFields.email.setAttribute("id", "email");
+                updateLabelClass("email");
+            }
+        }
+        function removeActiveClassFromFormElements() {
+            Object.values(formFields).forEach((field => {
+                field.classList.remove("_active-form-body-contact");
+            }));
+            const labels = document.querySelectorAll("label");
+            labels.forEach((label => label.classList.remove("_active-form-body-contact")));
+        }
+        function updateLabelClass(id) {
+            const label = document.querySelector(`label[for="${id}"]`);
+            if (label) label.classList.add("_active-form-body-contact");
+        }
+        function handleSocialButtonClick(button) {
+            socialButtons.forEach((btn => btn.classList.remove("_active-button-contact")));
+            button.classList.add("_active-button-contact");
+            updateContactInfo(button);
+        }
+        function handleCategoryButtonClick(button) {
+            button.classList.toggle("_active-button-category");
+        }
+        socialButtons.forEach((button => button.addEventListener("click", (() => handleSocialButtonClick(button)))));
+        categoryButtons.forEach((button => button.addEventListener("click", (() => handleCategoryButtonClick(button)))));
+    }));
+    document.addEventListener("DOMContentLoaded", (function() {
         const form = document.getElementById("contactForm");
         const sentForm = document.getElementById("sentForm");
-        const nameInput = document.getElementById("name");
         const resetButton = document.querySelector(".sent-body-contact__button");
-        if (form && sentForm && nameInput) form.addEventListener("submit", (function(e) {
+        if (!form) return;
+        const inputs = [ document.getElementById("name"), document.getElementById("email"), document.getElementById("tel") ].filter((input => input));
+        form.addEventListener("submit", (function(e) {
             e.preventDefault();
-            if (!nameInput.value.trim()) nameInput.classList.add("_error"); else if (!nameInput.value.includes("@")) nameInput.classList.add("_error"); else {
-                nameInput.classList.remove("_error");
+            inputs.forEach((input => input.classList.remove("_error")));
+            const isValid = inputs.some((input => input.value.trim()));
+            const hasActiveCategory = document.querySelector(".form-item-category._active-button-category");
+            if (isValid && hasActiveCategory) {
                 form.classList.add("_hidden-form");
                 sentForm.classList.add("_active-form");
-            }
+            } else inputs.forEach((input => {
+                if (!input.value.trim()) input.classList.add("_error");
+            }));
         }));
-        if (resetButton && form && sentForm) resetButton.addEventListener("click", (function() {
+        if (resetButton) resetButton.addEventListener("click", (function() {
+            const categoryButtons = document.querySelectorAll(".form-item-category");
+            categoryButtons.forEach((button => button.classList.remove("_active-button-category")));
             form.classList.remove("_hidden-form");
             form.reset();
             sentForm.classList.remove("_active-form");

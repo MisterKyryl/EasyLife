@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241127214630">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241129013743">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -124,7 +124,7 @@
 								<div class="body-services__wrapper">
 									<div class="body-services__value">01</div>
 									<div class="body-services__block">
-										<a href="#" class="body-services__top">
+										<a href="#" data-goto="#contact" data-goto-header class="body-services__top">
 											<h4 class="body-services__title title--h4">Формування ідеї</h4>
 											<div class="body-services__link">
 												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,7 +141,7 @@
 								<div class="body-services__wrapper">
 									<div class="body-services__value">02</div>
 									<div class="body-services__block">
-										<a href="#" class="body-services__top">
+										<a href="#" data-goto="#contact" data-goto-header class="body-services__top">
 											<h4 class="body-services__title title--h4">
 												Розробка ТЗ
 											</h4>
@@ -161,7 +161,7 @@
 								<div class="body-services__wrapper">
 									<div class="body-services__value">03</div>
 									<div class="body-services__block">
-										<a href="#" class="body-services__top">
+										<a href="#" data-goto="#contact" data-goto-header class="body-services__top">
 											<h4 class="body-services__title title--h4">
 												Розробка проекту
 											</h4>
@@ -181,7 +181,7 @@
 								<div class="body-services__wrapper">
 									<div class="body-services__value">04</div>
 									<div class="body-services__block">
-										<a href="#" class="body-services__top">
+										<a href="#" data-goto="#contact" data-goto-header class="body-services__top">
 											<h4 class="body-services__title title--h4">
 												Маркетинг
 											</h4>
@@ -201,7 +201,7 @@
 								<div class="body-services__wrapper">
 									<div class="body-services__value">05</div>
 									<div class="body-services__block">
-										<a href="#" class="body-services__top">
+										<a href="#" data-goto="#contact" data-goto-header class="body-services__top">
 											<h4 class="body-services__title title--h4">
 												Ведення проекту
 											</h4>
@@ -491,29 +491,35 @@
 					</div>
 				</div>
 			</section>
-			<section id="contact" class="page__contact contact">
-				<div class="contact__container">
+			<section class="page__contact contact">
+				<div id="contact" class="contact__container">
 					<div class="contact__body body-contact">
 						<div class="body-contact__top">
 							<p class="body-contact__text text--main">Швидкий спосіб отримати консультацію</p>
 							<h2 class="body-contact__title title--h2">Форма зворотньо<span>-</span>го зв'язку</h2>
 						</div>
 						<div data-da=".contact__container,991.98,1" class="body-contact__item item-body-contact">
-							<div class="item-body-contact__top">
-								<div class="item-body-contact__text">
-									Telegram bot
-								</div>
+							<div id="titleForm" class="item-body-contact__top">
+								<span class="item-body-contact__text">
+									Telegram
+								</span>
 								<div class="item-body-contact__image">
-									<svg width="28" height="28" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM14.64 6.8C14.49 8.38 13.84 12.22 13.51 13.99C13.37 14.74 13.09 14.99 12.83 15.02C12.25 15.07 11.81 14.64 11.25 14.27C10.37 13.69 9.87 13.33 9.02 12.77C8.03 12.12 8.67 11.76 9.24 11.18C9.39 11.03 11.95 8.7 12 8.49C12.0069 8.45819 12.006 8.42517 11.9973 8.3938C11.9886 8.36244 11.9724 8.33367 11.95 8.31C11.89 8.26 11.81 8.28 11.74 8.29C11.65 8.31 10.25 9.24 7.52 11.08C7.12 11.35 6.76 11.49 6.44 11.48C6.08 11.47 5.4 11.28 4.89 11.11C4.26 10.91 3.77 10.8 3.81 10.45C3.83 10.27 4.08 10.09 4.55 9.9C7.47 8.63 9.41 7.79 10.38 7.39C13.16 6.23 13.73 6.03 14.11 6.03C14.19 6.03 14.38 6.05 14.5 6.15C14.6 6.23 14.63 6.34 14.64 6.42C14.63 6.48 14.65 6.66 14.64 6.8Z" fill="#ababab" />
+									<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2.5C6.48 2.5 2 6.98 2 12.5C2 18.02 6.48 22.5 12 22.5C17.52 22.5 22 18.02 22 12.5C22 6.98 17.52 2.5 12 2.5ZM16.64 9.3C16.49 10.88 15.84 14.72 15.51 16.49C15.37 17.24 15.09 17.49 14.83 17.52C14.25 17.57 13.81 17.14 13.25 16.77C12.37 16.19 11.87 15.83 11.02 15.27C10.03 14.62 10.67 14.26 11.24 13.68C11.39 13.53 13.95 11.2 14 10.99C14.0069 10.9582 14.006 10.9252 13.9973 10.8938C13.9886 10.8624 13.9724 10.8337 13.95 10.81C13.89 10.76 13.81 10.78 13.74 10.79C13.65 10.81 12.25 11.74 9.52 13.58C9.12 13.85 8.76 13.99 8.44 13.98C8.08 13.97 7.4 13.78 6.89 13.61C6.26 13.41 5.77 13.3 5.81 12.95C5.83 12.77 6.08 12.59 6.55 12.4C9.47 11.13 11.41 10.29 12.38 9.89C15.16 8.73 15.73 8.53 16.11 8.53C16.19 8.53 16.38 8.55 16.5 8.65C16.6 8.73 16.63 8.84 16.64 8.92C16.63 8.98 16.65 9.16 16.64 9.3Z" fill="currentColor" />
 									</svg>
 								</div>
 							</div>
 							<form id="contactForm" class="item-body-contact__form form-body-contact">
-								<label for="name" class="form-body-contact__label">Нікнейм<span>*</span></label>
-								<input id="name" autocomplete="off" type="text" name="form[name]" placeholder="@Easy_Life" class="form-body-contact__input input">
-								<label for="textarea" class="form-body-contact__label">Ваш коментарій</label>
-								<textarea id="textarea" autocomplete="off" name="form[textarea]" placeholder="Hello! I want to take consultation about website development." class="form-body-contact__input input"></textarea>
+								<label for="name" class="form-body-contact__label _active-form-body-contact">Нікнейм<span>*</span></label>
+								<input id="name" autocomplete="off" type="text" name="form[name]" placeholder="@Easy_Life" class="form-body-contact__input input _active-form-body-contact">
+
+								<label for="tel" class="form-body-contact__label">Введіть телефон<span>*</span></label>
+								<input id="tel" autocomplete="off" type="tel" name="form[tel]" placeholder="+380" class="form-body-contact__input input" oninput="this.value = this.value.replace(/[^0-9\+]/g, '').replace(/^([^+])/, '+$1');">
+
+								<label for="email" class="form-body-contact__label">Введіть ваш email<span>*</span></label>
+								<input id="email" autocomplete="off" type="email" name="form[email]" placeholder="loremipsum@gmail.com" class="form-body-contact__input input">
+								<label for="textarea" class="form-body-contact__label form-body-contact__label_textarea">Ваш коментарій</label>
+								<textarea id="textarea" autocomplete="off" name="form[textarea]" placeholder="Hello! I want to take consultation about website development." class="form-body-contact__input form-body-contact__input_textarea input"></textarea>
 								<button type="submit" class="form-body-contact__button button button_blue">Відправити</button>
 							</form>
 							<div id="sentForm" class="item-body-contact__sent sent-body-contact">
@@ -536,44 +542,78 @@
 								<div class="actions-contact__wrapper">
 									<div class="actions-contact__slide slide-actions-contact">
 										<div class="slide-actions-contact__body">
-											<a href="#" class="slide-actions-contact__item">
+											<button id="telegram" data-social="Telegram" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-social form-item-social_name _active-button-contact">
 												<div class="actions-contact__image">
-													<img src="img/icons/slider-telegram.svg" class="actions-contact__picture" alt="Image">
+													<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 2.5C6.48 2.5 2 6.98 2 12.5C2 18.02 6.48 22.5 12 22.5C17.52 22.5 22 18.02 22 12.5C22 6.98 17.52 2.5 12 2.5ZM16.64 9.3C16.49 10.88 15.84 14.72 15.51 16.49C15.37 17.24 15.09 17.49 14.83 17.52C14.25 17.57 13.81 17.14 13.25 16.77C12.37 16.19 11.87 15.83 11.02 15.27C10.03 14.62 10.67 14.26 11.24 13.68C11.39 13.53 13.95 11.2 14 10.99C14.0069 10.9582 14.006 10.9252 13.9973 10.8938C13.9886 10.8624 13.9724 10.8337 13.95 10.81C13.89 10.76 13.81 10.78 13.74 10.79C13.65 10.81 12.25 11.74 9.52 13.58C9.12 13.85 8.76 13.99 8.44 13.98C8.08 13.97 7.4 13.78 6.89 13.61C6.26 13.41 5.77 13.3 5.81 12.95C5.83 12.77 6.08 12.59 6.55 12.4C9.47 11.13 11.41 10.29 12.38 9.89C15.16 8.73 15.73 8.53 16.11 8.53C16.19 8.53 16.38 8.55 16.5 8.65C16.6 8.73 16.63 8.84 16.64 8.92C16.63 8.98 16.65 9.16 16.64 9.3Z" fill="currentColor" />
+													</svg>
 												</div>
 												<div class="actions-contact__text">Telegram</div>
-											</a>
-											<a href="#" class="slide-actions-contact__item slide-actions-contact__item_big">
+											</button>
+											<button data-social="Phone number" type="button" class="slide-actions-contact__item form-item-social form-item-social_phone">
 												<div class="actions-contact__image">
-													<img src="img/icons/slider-facebook.svg" class="actions-contact__picture" alt="Image">
+													<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M16.551 22.6335C15.111 22.5805 11.03 22.0165 6.75602 17.7435C2.48302 13.4695 1.92002 9.38946 1.86602 7.94846C1.78602 5.75246 3.46802 3.61946 5.41102 2.78646C5.645 2.68543 5.90122 2.64696 6.15455 2.67484C6.40788 2.70271 6.64961 2.79597 6.85602 2.94546C8.45602 4.11146 9.56002 5.87546 10.508 7.26246C10.7166 7.56719 10.8058 7.93801 10.7586 8.30426C10.7114 8.67051 10.5311 9.00659 10.252 9.24846L8.30102 10.6975C8.20677 10.7655 8.14042 10.8655 8.1143 10.9788C8.08818 11.0921 8.10407 11.211 8.15902 11.3135C8.60102 12.1165 9.38702 13.3125 10.287 14.2125C11.187 15.1125 12.44 15.9505 13.299 16.4425C13.4067 16.5029 13.5335 16.5198 13.6533 16.4897C13.7731 16.4596 13.8767 16.3847 13.943 16.2805L15.213 14.3475C15.4465 14.0373 15.7909 13.8295 16.1742 13.7676C16.5575 13.7058 16.9498 13.7946 17.269 14.0155C18.676 14.9895 20.318 16.0745 21.52 17.6135C21.6817 17.8214 21.7845 18.0689 21.8177 18.3301C21.851 18.5913 21.8134 18.8567 21.709 19.0985C20.872 21.0515 18.754 22.7145 16.551 22.6335Z" fill="currentColor" />
+													</svg>
+												</div>
+												<div class="actions-contact__text">Phone</div>
+											</button>
+										</div>
+										<div class="slide-actions-contact__body slide-actions-contact__body">
+											<button data-social="Mail" type="button" class="slide-actions-contact__item form-item-social form-item-social_email">
+												<div class="actions-contact__image">
+													<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M20 4.5H4C2.9 4.5 2.01 5.4 2.01 6.5L2 18.5C2 19.6 2.9 20.5 4 20.5H20C21.1 20.5 22 19.6 22 18.5V6.5C22 5.4 21.1 4.5 20 4.5ZM19.6 8.75L12.53 13.17C12.21 13.37 11.79 13.37 11.47 13.17L4.4 8.75C4.29973 8.69371 4.21192 8.61766 4.14189 8.52645C4.07186 8.43525 4.02106 8.33078 3.99258 8.21937C3.96409 8.10796 3.9585 7.99194 3.97616 7.87831C3.99381 7.76468 4.03434 7.65581 4.09528 7.5583C4.15623 7.46079 4.23632 7.37666 4.33073 7.311C4.42513 7.24533 4.53187 7.19951 4.6445 7.1763C4.75712 7.15309 4.87328 7.15297 4.98595 7.17595C5.09863 7.19893 5.20546 7.24453 5.3 7.31L12 11.5L18.7 7.31C18.7945 7.24453 18.9014 7.19893 19.014 7.17595C19.1267 7.15297 19.2429 7.15309 19.3555 7.1763C19.4681 7.19951 19.5749 7.24533 19.6693 7.311C19.7637 7.37666 19.8438 7.46079 19.9047 7.5583C19.9657 7.65581 20.0062 7.76468 20.0238 7.87831C20.0415 7.99194 20.0359 8.10796 20.0074 8.21937C19.9789 8.33078 19.9281 8.43525 19.8581 8.52645C19.7881 8.61766 19.7003 8.69371 19.6 8.75Z" fill="currentColor" />
+													</svg>
+												</div>
+												<div class="actions-contact__text">Mail</div>
+											</button>
+											<button data-social="Facebook" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-social form-item-social_name">
+												<div class="actions-contact__image">
+													<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M22 12.5C22 6.98 17.52 2.5 12 2.5C6.48 2.5 2 6.98 2 12.5C2 17.34 5.44 21.37 10 22.3V15.5H8V12.5H10V10C10 8.07 11.57 6.5 13.5 6.5H16V9.5H14C13.45 9.5 13 9.95 13 10.5V12.5H16V15.5H13V22.45C18.05 21.95 22 17.69 22 12.5Z" fill="currentColor" />
+													</svg>
 												</div>
 												<div class="actions-contact__text">Facebook</div>
-											</a>
-											<a data-da=".slide-actions-contact__body_1, 767.98, 1" href="#" class="slide-actions-contact__item">
-												<div class="actions-contact__image">
-													<img src="img/icons/slider-viber.svg" class="actions-contact__picture" alt="Image">
-												</div>
-												<div class="actions-contact__text">Viber</div>
-											</a>
+											</button>
 										</div>
 									</div>
 									<div class="actions-contact__slide">
 										<div class="slide-actions-contact__body slide-actions-contact__body">
-											<a href="#" class="slide-actions-contact__item slide-actions-contact__item_big">
+											<button data-social="Viber" type="button" class="slide-actions-contact__item form-item-social form-item-social_phone">
 												<div class="actions-contact__image">
-													<img src="img/icons/slider-email.svg" class="actions-contact__picture" alt="Image">
+													<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6751 3.12805C13.5289 2.42477 10.2663 2.42477 7.12008 3.12805L6.78108 3.20305C5.89586 3.40038 5.08277 3.83952 4.43235 4.47159C3.78192 5.10365 3.31968 5.90383 3.09708 6.78305C2.30097 9.92575 2.30097 13.2173 3.09708 16.36C3.30939 17.1985 3.73986 17.9659 4.34476 18.5841C4.94966 19.2024 5.70743 19.6495 6.54108 19.88L7.00608 22.656C7.02093 22.7442 7.05913 22.8268 7.11672 22.8951C7.1743 22.9635 7.24917 23.0152 7.33351 23.0448C7.41785 23.0744 7.50859 23.0809 7.59628 23.0635C7.68396 23.0461 7.76539 23.0056 7.83208 22.946L10.5631 20.503C12.6132 20.6268 14.6705 20.4629 16.6751 20.016L17.0151 19.941C17.9003 19.7437 18.7134 19.3046 19.3638 18.6725C20.0142 18.0404 20.4765 17.2403 20.6991 16.361C21.4952 13.2183 21.4952 9.92674 20.6991 6.78405C20.4764 5.90471 20.014 5.10444 19.3634 4.47236C18.7128 3.84028 17.8995 3.40121 17.0141 3.20405L16.6751 3.12805ZM7.96408 6.70205C7.77823 6.67483 7.58866 6.71225 7.42708 6.80805H7.41308C7.03808 7.02805 6.70008 7.30505 6.41208 7.63105C6.17208 7.90805 6.04208 8.18805 6.00808 8.45805C5.98808 8.61805 6.00208 8.78005 6.04908 8.93304L6.06708 8.94305C6.33708 9.73604 6.68908 10.499 7.11908 11.217C7.67378 12.2254 8.35606 13.1581 9.14908 13.992L9.17308 14.026L9.21108 14.054L9.23408 14.081L9.26208 14.105C10.0991 14.9004 11.0339 15.5859 12.0441 16.145C13.1991 16.774 13.9001 17.071 14.3211 17.195V17.201C14.4441 17.239 14.5561 17.256 14.6691 17.256C15.0278 17.2303 15.3674 17.0845 15.6331 16.842C15.9581 16.554 16.2331 16.215 16.4471 15.838V15.831C16.6481 15.451 16.5801 15.093 16.2901 14.85C15.7081 14.3405 15.0781 13.8884 14.4091 13.5C13.9611 13.257 13.5061 13.404 13.3221 13.65L12.9291 14.146C12.7271 14.392 12.3611 14.358 12.3611 14.358L12.3511 14.364C9.62008 13.667 8.89108 10.902 8.89108 10.902C8.89108 10.902 8.85708 10.526 9.11008 10.334L9.60208 9.93805C9.83808 9.74605 10.0021 9.29205 9.74908 8.84405C9.36166 8.17547 8.91056 7.54588 8.40208 6.96405C8.29086 6.82742 8.13509 6.73431 7.96208 6.70105M12.5781 5.50005C12.4455 5.50005 12.3183 5.55272 12.2245 5.64649C12.1308 5.74026 12.0781 5.86744 12.0781 6.00005C12.0781 6.13265 12.1308 6.25983 12.2245 6.3536C12.3183 6.44737 12.4455 6.50005 12.5781 6.50005C13.8431 6.50005 14.8931 6.91305 15.7241 7.70505C16.1511 8.13805 16.4841 8.65105 16.7021 9.21305C16.9211 9.77605 17.0211 10.377 16.9951 10.979C16.9923 11.0447 17.0025 11.1103 17.0251 11.172C17.0477 11.2337 17.0822 11.2904 17.1267 11.3387C17.2165 11.4365 17.3415 11.4945 17.4741 11.5C17.6067 11.5056 17.7361 11.4583 17.8338 11.3684C17.9315 11.2786 17.9895 11.1537 17.9951 11.021C18.0249 10.2806 17.902 9.54195 17.6341 8.85105C17.3649 8.15663 16.955 7.52541 16.4301 6.99705L16.4201 6.98705C15.3891 6.00205 14.0841 5.50005 12.5781 5.50005ZM12.5441 7.14405C12.4115 7.14405 12.2843 7.19672 12.1905 7.29049C12.0968 7.38426 12.0441 7.51144 12.0441 7.64405C12.0441 7.77665 12.0968 7.90383 12.1905 7.9976C12.2843 8.09137 12.4115 8.14405 12.5441 8.14405H12.5611C13.4731 8.20905 14.1371 8.51305 14.6021 9.01205C15.0791 9.52605 15.3261 10.165 15.3071 10.955C15.304 11.0877 15.3538 11.216 15.4454 11.312C15.537 11.4079 15.663 11.4635 15.7956 11.4665C15.9282 11.4696 16.0566 11.4198 16.1525 11.3282C16.2484 11.2366 16.304 11.1107 16.3071 10.978C16.3311 9.94104 15.9971 9.04605 15.3351 8.33205V8.33005C14.6581 7.60405 13.7291 7.22005 12.6111 7.14505L12.5941 7.14305L12.5441 7.14405ZM12.5251 8.81905C12.4582 8.81314 12.3908 8.82078 12.3269 8.84151C12.263 8.86223 12.2039 8.89562 12.1532 8.93968C12.1025 8.98374 12.0612 9.03757 12.0317 9.09794C12.0023 9.15832 11.9853 9.22401 11.9818 9.29109C11.9783 9.35818 11.9884 9.42528 12.0114 9.48839C12.0344 9.5515 12.0699 9.60932 12.1157 9.65841C12.1616 9.7075 12.2169 9.74685 12.2783 9.7741C12.3397 9.80136 12.4059 9.81596 12.4731 9.81705C12.8911 9.83905 13.1581 9.96504 13.3261 10.134C13.4951 10.304 13.6211 10.577 13.6441 11.004C13.6453 11.0711 13.6601 11.1373 13.6874 11.1986C13.7148 11.2599 13.7542 11.315 13.8033 11.3607C13.8525 11.4065 13.9103 11.4418 13.9734 11.4647C14.0364 11.4876 14.1035 11.4976 14.1705 11.494C14.2375 11.4905 14.3031 11.4735 14.3634 11.444C14.4237 11.4146 14.4775 11.3733 14.5215 11.3226C14.5655 11.2719 14.5989 11.2129 14.6196 11.1491C14.6403 11.0852 14.6479 11.0179 14.6421 10.951C14.6101 10.351 14.4221 9.82104 14.0371 9.43105C13.6501 9.04105 13.1231 8.85105 12.5251 8.81905Z" fill="currentColor" />
+													</svg>
 												</div>
-												<div class="actions-contact__text">Mail</div>
-											</a>
-											<a href="#" class="slide-actions-contact__item slide-actions-contact__item_big">
+												<div class="actions-contact__text">Viber</div>
+											</button>
+											<button data-social="WhatsApp" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-social form-item-social_phone">
 												<div class="actions-contact__image">
-													<img src="img/icons/slider-linkedin.svg" class="actions-contact__picture" alt="Image">
+													<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C6.477 2.5 2 6.977 2 12.5C2 14.39 2.525 16.16 3.438 17.668L2.546 20.7C2.49478 20.8741 2.49141 21.0587 2.53624 21.2346C2.58107 21.4104 2.67245 21.5709 2.80076 21.6992C2.92907 21.8276 3.08958 21.9189 3.26542 21.9638C3.44125 22.0086 3.62592 22.0052 3.8 21.954L6.832 21.062C8.39074 22.0049 10.1782 22.5023 12 22.5C17.523 22.5 22 18.023 22 12.5C22 6.977 17.523 2.5 12 2.5ZM9.738 14.763C11.761 16.785 13.692 17.052 14.374 17.077C15.411 17.115 16.421 16.323 16.814 15.404C16.8632 15.2896 16.881 15.1641 16.8655 15.0405C16.85 14.917 16.8019 14.7998 16.726 14.701C16.178 14.001 15.437 13.498 14.713 12.998C14.5619 12.8932 14.3761 12.8512 14.1946 12.8806C14.0131 12.9101 13.8502 13.0088 13.74 13.156L13.14 14.071C13.1083 14.12 13.0591 14.1551 13.0025 14.1692C12.9459 14.1833 12.886 14.1754 12.835 14.147C12.428 13.914 11.835 13.518 11.409 13.092C10.983 12.666 10.611 12.1 10.402 11.719C10.3767 11.6705 10.3696 11.6145 10.3819 11.5611C10.3941 11.5078 10.425 11.4606 10.469 11.428L11.393 10.742C11.5252 10.6276 11.6106 10.4684 11.6328 10.2949C11.6549 10.1215 11.6123 9.94596 11.513 9.802C11.065 9.146 10.543 8.312 9.786 7.759C9.6881 7.68866 9.57369 7.64479 9.45385 7.63165C9.33402 7.61851 9.21282 7.63654 9.102 7.684C8.182 8.078 7.386 9.088 7.424 10.127C7.449 10.809 7.716 12.74 9.738 14.763Z" fill="currentColor" />
+													</svg>
+												</div>
+												<div class="actions-contact__text">WhatsApp</div>
+											</button>
+										</div>
+										<div class="slide-actions-contact__body slide-actions-contact__body">
+											<button data-social="LinkedIn" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-social form-item-social_name">
+												<div class="actions-contact__image">
+													<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z" fill="currentColor" />
+													</svg>
 												</div>
 												<div class="actions-contact__text">LinkedIn</div>
-											</a>
-										</div>
-									</div>
-									<div class="actions-contact__slide actions-contact__slide_mob">
-										<div class="slide-actions-contact__body slide-actions-contact__body_1">
+											</button>
+											<button data-social="Twitter(x)" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-social form-item-social_name">
+												<div class="actions-contact__image">
+													<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M8 2.5H1L9.26 13.515L1.45 22.5H4.1L10.488 15.151L16 22.5H23L14.392 11.022L21.8 2.5H19.15L13.164 9.386L8 2.5ZM17 20.5L5 4.5H7L19 20.5H17Z" fill="currentColor" />
+													</svg>
+												</div>
+												<div class="actions-contact__text">Twitter(x)</div>
+											</button>
 										</div>
 									</div>
 								</div>
@@ -591,30 +631,30 @@
 								<div class="actions-contact__wrapper">
 									<div class="actions-contact__slide slide-actions-contact">
 										<div class="slide-actions-contact__body">
-											<a href="#" class="slide-actions-contact__item">
+											<button data-category="Design" type="button" class="slide-actions-contact__item form-item-category form-item-category">
 												<div class="actions-contact__text">Дизайн</div>
-											</a>
-											<a href="#" class="slide-actions-contact__item slide-actions-contact__item_big">
+											</button>
+											<button data-category="Telegram Bot" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-category">
 												<div class="actions-contact__text">Телеграм бот</div>
-											</a>
+											</button>
 										</div>
 										<div class="slide-actions-contact__body">
-											<a href="#" class="slide-actions-contact__item slide-actions-contact__item_big">
+											<button data-category="Management Social" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-category">
 												<div class="actions-contact__text">Ведення соцмереж</div>
-											</a>
-											<a href="#" class="slide-actions-contact__item slide-actions-contact__item_big">
+											</button>
+											<button data-category="Website" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-category">
 												<div class="actions-contact__text">Веб-сайт</div>
-											</a>
+											</button>
 										</div>
 									</div>
 									<div class="actions-contact__slide">
 										<div class="slide-actions-contact__body slide-actions-contact__body">
-											<a href="#" class="slide-actions-contact__item">
+											<button data-category="Marketing" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-category">
 												<div class="actions-contact__text">Маркетинг</div>
-											</a>
-											<a href="#" class="slide-actions-contact__item slide-actions-contact__item_big">
+											</button>
+											<button data-category="Telegram Web App" type="button" class="slide-actions-contact__item slide-actions-contact__item_big form-item-category">
 												<div class="actions-contact__text">Телеграм ВебАпп</div>
-											</a>
+											</button>
 										</div>
 									</div>
 								</div>
@@ -705,7 +745,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241127214630"></script>
+	<script src="js/app.min.js?_v=20241129013743"></script>
 </body>
 
 </html>

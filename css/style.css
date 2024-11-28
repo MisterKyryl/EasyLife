@@ -429,15 +429,9 @@ textarea.input {
 }
 .actions-contact__wrapper {
   display: flex;
-  cursor: -webkit-grab;
-  cursor: grab;
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease
-}
-.actions-contact__wrapper:active {
-  cursor: -webkit-grabbing;
-  cursor: grabbing
 }
 .actions-contact__slide {
   min-width: 100%
@@ -982,6 +976,7 @@ textarea.input {
 .item-body-contact__top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #eaecef;
   padding: .875rem .9375rem .875rem 1.9375rem
 }
@@ -991,6 +986,13 @@ textarea.input {
 }
 .item-body-contact__image {
   display: flex
+}
+.item-body-contact__image svg {
+  width: 1.75rem;
+  height: 1.75rem
+}
+.item-body-contact__image path {
+  fill: #9f9f9f
 }
 .form-body-contact {
   display: flex;
@@ -1002,10 +1004,14 @@ textarea.input {
   display: none
 }
 .form-body-contact__label {
+  display: none;
   font-weight: 600;
   font-size: 1rem;
   padding-top: .5rem;
   line-height: 1.125
+}
+.form-body-contact__label_textarea {
+  display: block
 }
 .form-body-contact__label:not(:last-child) {
   margin-bottom: .75rem
@@ -1013,8 +1019,20 @@ textarea.input {
 .form-body-contact__label span {
   color: #d80000
 }
+.form-body-contact__label._active-form-body-contact {
+  display: block
+}
+.form-body-contact__input {
+  display: none
+}
+.form-body-contact__input_textarea {
+  display: block
+}
 .form-body-contact__input:not(:last-child) {
   margin-bottom: 1rem
+}
+.form-body-contact__input._active-form-body-contact {
+  display: block
 }
 .form-body-contact__button {
   align-self: center;
@@ -1054,7 +1072,7 @@ textarea.input {
   margin-bottom: 1rem
 }
 .slide-actions-contact__item {
-  flex: 0 1 6.0625rem;
+  flex: 0 1 7.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1065,11 +1083,12 @@ textarea.input {
   transition: background .3s;
   margin-right: .625rem
 }
-.slide-actions-contact__item:hover {
-  background: #369eff
-}
 .slide-actions-contact__item_big {
   flex: 1 1 auto
+}
+.slide-actions-contact__item._active-button-category,
+.slide-actions-contact__item._active-button-contact {
+  background: #369eff
 }
 .actions-contact {
   max-width: 29.125rem
@@ -1089,6 +1108,9 @@ textarea.input {
 }
 .actions-contact__image {
   display: flex
+}
+.actions-contact__image path {
+  fill: #fbfbfb
 }
 .actions-contact__text {
   font-weight: 600;
@@ -2771,5 +2793,10 @@ textarea.input {
   }
   .create-project {
     padding-bottom: clamp(5.75rem ,4.8333333333rem + 3.0555555556vw ,7.125rem)
+  }
+}
+@media (any-hover:hover) {
+  .slide-actions-contact__item:hover {
+    background: #369eff
   }
 }
