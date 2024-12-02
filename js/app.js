@@ -6116,6 +6116,19 @@
         const pauseDuration = 500;
         const pauseFrames = [ 1, 36, totalFrames ];
         const imageElements = document.querySelectorAll(".image-main");
+        function preloadImages() {
+            return new Promise((resolve => {
+                let loadedImages = 0;
+                for (let i = 1; i <= totalFrames; i++) {
+                    const img = new Image;
+                    img.src = `img/cube/cube_blue/${i}.webp`;
+                    img.onload = () => {
+                        loadedImages++;
+                        if (loadedImages === totalFrames) resolve();
+                    };
+                }
+            }));
+        }
         imageElements.forEach((imageElement => {
             let currentFrame = 1;
             let direction = 1;
@@ -6150,6 +6163,9 @@
             });
             observer.observe(imageElement);
             if (imageElement.getBoundingClientRect().top < window.innerHeight) playFrames();
+        }));
+        preloadImages().then((() => {
+            console.log("Все изображения успешно загружены");
         }));
     }));
     document.addEventListener("DOMContentLoaded", (function() {
